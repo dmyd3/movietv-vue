@@ -1,7 +1,7 @@
 <template>
     <div id="sidebar">
         <img alt="Vue logo" src="../assets/logo.png">
-        <ul class="sidebar-options">
+        <ul class="sidebar-menu">
             <li class="menu-option">
                 <router-link to="/helloworld">
                     Hello World
@@ -37,7 +37,7 @@
         width: 300px;
     }
 
-    ul.sidebar-options {
+    ul.sidebar-menu {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -51,14 +51,18 @@
         height: 2em;
     }
 
-    a[href] {
+    .menu-option a[href] {
         display: inline-block;
         height: 100%;
         width: 100%;
         line-height: 2em;
     }
 
-    a[href].router-link-active {
+    .menu-option a[href]:hover {
+        background-color: rgb(80, 0, 80);
+    }
+
+    .menu-option a[href].router-link-active {
         color: greenyellow;
         background-color: black;
     }

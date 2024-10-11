@@ -2,23 +2,21 @@
   <SideBar></SideBar>
 
   <div id="content">
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <helloworld msg="Welcome to Your Vue.js App"></helloworld> -->
     <router-view></router-view>
   </div>
 
 </template>
 
 <script>
-// import { RouterView } from 'vue-router';
-import SideBar from './components/SideBar.vue';
+  // import { RouterView } from 'vue-router';
+  import SideBar from './components/SideBar.vue';
 
-export default {
-  name: 'App',
-  components: {
-    SideBar,
+  export default {
+    name: 'App',
+    components: {
+      SideBar,
+    },
   }
-}
 </script>
 
 <style>

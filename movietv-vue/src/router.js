@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from "./pages/HelloWorld.vue";
+import MainPage from "./pages/MainPage.vue";
 import MovieList from "./pages/MovieList.vue";
 
 const router = createRouter({
@@ -11,25 +12,33 @@ const router = createRouter({
             path: '/helloworld',
             component: HelloWorld,
             props: {
-                msg: "aaaaaa",
+                msg: "Hello World",
             },
         },
         { path: '/', redirect: '/main' },
         { 
             name: 'main',
             path: '/main',
-            // component: MainPage,
+            component: MainPage,
         },
         { 
             name: 'movies',
             path: '/movies',
             component: MovieList,
+            children: [
+                { 
+                    name: 'movie-info',
+                    path: ':pk',
+                    // component: MovieInfo,
+                },
+            ]
         },
         { 
             name: 'shows',
             path: '/shows',
             // component: TVShowsList,
         },
+        { path: '/:notFound(.*)', redirect: '/' }
     ],
 });
 
