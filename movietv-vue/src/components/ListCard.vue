@@ -2,9 +2,8 @@
     <div class="card-container" element-pk="{{ element.pk }}">
         <h3>{{ element.title }}</h3>
 
-        <button>
-            <!-- <router-link>MoreInfo</router-link> -->
-            More Info
+        <button class="more-info-btn">
+            <router-link :to="{ name: 'movie-info', params: { pk: element.pk } }">MoreInfo</router-link>
         </button>
     </div>
 </template>
@@ -37,7 +36,7 @@
         border-width: 3px;
     }
 
-    button {
+    button.more-info-btn {
         height: 2em;
 
         border-radius: 5px;

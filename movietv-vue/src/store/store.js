@@ -21,14 +21,20 @@ export default createStore({
                 {
                     pk: "m1",
                     title: "Dune Part 2",
+                    description: "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family.",
+                    runtime: 150,
                 },
                 {
                     pk: "m2",
                     title: "Avengers Endgame",
+                    description: "Avengers assemble agains Thanos one last time.",
+                    runtime: 180,
                 },
                 {
                     pk: "m3",
                     title: "Dungeons & Dragons",
+                    description: "A band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
+                    runtime: 120,
                 },
             ],
             tvShows: [],
