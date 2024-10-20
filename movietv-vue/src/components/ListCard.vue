@@ -43,6 +43,7 @@
         border-color: blue;
         border-style: solid;
         border-width: 2px;
+        background-color: gray;
 
         cursor: pointer;
     }

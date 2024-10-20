@@ -16,6 +16,17 @@
     components: {
       SideBar,
     },
+    data() {
+      return {
+        movieColor: "rgb(35, 141, 177)",
+        showColor: "orange",
+      };
+    },
+    provide() {
+      return {
+        "movieColor": this.movieColor,
+      };
+    },
   }
 </script>
 

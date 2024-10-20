@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="info-container">
         <h2 id="title-header">{{ title }}</h2>
         <p id="description">{{ description }}</p>
 
@@ -23,7 +23,7 @@ export default {
         }
 
         const fullData = {
-            ...dataData
+            ...dataData,
         };
 
         return fullData;
