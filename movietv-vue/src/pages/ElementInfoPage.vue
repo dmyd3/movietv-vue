@@ -1,14 +1,18 @@
 <template>
-    <component :is="componentType"></component>
+    <div>
+        <component :is="componentType"></component>
+    </div>
 </template>
 
 <script>
     import MovieInfo from '../components/MovieInfo.vue';
+    import ShowInfo from '@/components/ShowInfo.vue';
 
     export default {
         props: ['elementType'],
         components: {
-            MovieInfo
+            MovieInfo,
+            ShowInfo,
         },
         computed: {
             componentType() {
@@ -17,7 +21,7 @@
                     value = "movie-info";
                 }
                 else {
-                    value = "MovieInfo"; // TV SHOW
+                    value = "show-info"; // TV SHOW
                 }
 
                 return value;
@@ -29,8 +33,6 @@
 <style>
     .info-container {
         color: black;
-        background-color: rgb(160, 160, 160);
-        
         margin: 1em 1em;
         padding: 1em;
         border-radius: 20px;

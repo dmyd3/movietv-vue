@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Movies</h1>
-        <BaseList :element-list="moviesList"></BaseList>
+        <h1>TV Shows</h1>
+        <BaseList :element-list="showsList"></BaseList>
     </div>
 </template>
 
@@ -14,12 +14,12 @@
         },
         data() {
             return {
-                moviesList: this.$store.getters.movies,
+                showsList: this.$store.getters.tvShows,
             };
         },
         provide() {
             return {
-                "elementType": "movie",
+                "elementType": "show",
             };
         },
     }

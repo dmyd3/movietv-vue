@@ -3,7 +3,8 @@
         <h3>{{ element.title }}</h3>
 
         <button class="more-info-btn">
-            <router-link :to="{ name: 'movie-info', params: { pk: element.pk } }">MoreInfo</router-link>
+            <!-- <router-link :to="{ name: 'movie-info', params: { pk: element.pk } }">More Info</router-link> -->
+            <router-link :to="routeLink">More Info</router-link>
         </button>
     </div>
 </template>
@@ -16,6 +17,20 @@
                 cardWidth: '400px',
             };
         },
+        inject: ["elementType"],
+        computed: {
+            routeLink() {
+                let infoLink = { params: { pk: this.element.pk } };
+
+                if (this.elementType == 'movie') {
+                    infoLink.name = "movie-info";
+                } else {
+                    infoLink.name = "show-info";
+                }
+
+                return infoLink;
+            }
+        }
     }
 </script>
 

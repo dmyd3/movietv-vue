@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HelloWorld from "./pages/HelloWorld.vue";
 import MainPage from "./pages/MainPage.vue";
 import MovieList from "./pages/MovieList.vue";
+import ShowList from "./pages/ShowList.vue";
 import ElementInfoPage from "./pages/ElementInfoPage.vue";
 
 const router = createRouter({
@@ -44,7 +45,13 @@ const router = createRouter({
         { 
             name: 'shows',
             path: '/shows',
-            // component: TVShowsList,
+            component: ShowList,
+        },
+        {
+            name: 'show-info',
+            path: '/shows/:pk',
+            component: ElementInfoPage,
+            props: { elementType: "show"},
         },
         { path: '/:notFound(.*)', redirect: '/' }
     ],

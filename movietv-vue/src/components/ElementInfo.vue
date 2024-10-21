@@ -30,3 +30,9 @@ export default {
     },
 }
 </script>
+
+<style>
+    .info-container {
+        background-color: var(--info-bg);
+    }
+</style>

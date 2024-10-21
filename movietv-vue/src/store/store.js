@@ -40,7 +40,22 @@ export default createStore({
                     director: "John Francis Daley, Jonathan M. Goldstein",
                 },
             ],
-            tvShows: [],
+            tvShows: [
+                {
+                    pk: "ts1",
+                    title: "Loki",
+                    description: "Time travel nordic god.",
+                    seasons: 2,
+                    status: "Finished",
+                },
+                {
+                    pk: "ts2",
+                    title: "Andor",
+                    description: "Rebel alliance against the Emperor Palpatine.",
+                    seasons: 2,
+                    status: "In Progress",
+                },
+            ],
         };
     },
     getters: {
